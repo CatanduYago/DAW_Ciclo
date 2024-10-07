@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo</title>
+    <script>
+        function BotonAcepta() {
+            let Nombre = document.getElementsByName("nom")[0].value;
+            let Apellidos = document.getElementsByName("ape")[0].value;
+            return alert("Tu nombre es: " + Nombre + "\nTus apellidos son: " + Apellidos);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="text" name="nom" id="input" size="40px"><br><br>
+        <input type="text" name="ape" id="input" size="40px"><br><br>
+        <input type="button" value="Aceptar" onclick="BotonAcepta();">
+    </form>
+</body>
+
+</html>

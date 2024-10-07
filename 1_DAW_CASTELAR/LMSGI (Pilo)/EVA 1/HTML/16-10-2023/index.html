@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de tabla mejorada</title>
+    <style>
+        table {
+            border-collapse: collapse};
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <!-- caption pone un titulo a la tabla-->
+        <caption>Alumnos Rue del Percebe</caption>
+        <!-- colgroup agrupa las columnas para dar estilos-->
+        <colgroup>
+            <!-- col columnas a las que les doy estilos-->
+            <col span="1" style="background-color:#cc0066;font-weight:bolder;">
+            <col span="2" style="background-color:aqua; font:'Courier New', Courier, monospace">
+            <col span="1" style="background-color:white">
+            <col span="1" style="background-color:yellow;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font: size 34px;" >
+        </colgroup>
+        <!-- thead son las columnas de cabecera-->
+        <thead>
+            
+            <th>Alumnos</th>
+            <th>Ciclos</th>
+            <th> Modulos</th>
+            <th>Cursos</th>
+            <th>Promociona</th>
+        </thead>
+        <!-- tbody es el cuerpo de la tabla-->
+        <tbody>
+            <tr>
+                <td>Perico, el de los palotes </td>
+                <td>DAW</td>
+                <td>Lenguaje de marcas</td>
+                <td>1º</td>
+                <td>Promociona</td>
+            </tr>
+            <tr>
+                <td>Pipi, Calzas largas</td>
+                <td>DAW</td>
+                <td>Base de datos</td>
+                <td>2º</td>
+                <td>No promociona</td>
+            </tr>
+            <tr>
+                <td>Pepito grillo</td>
+                <td>ASIR</td>
+                <td>Implantacion de Redes</td>
+                <td>2º</td>
+                <td>Promociona</td>
+            </tr>
+        </tbody>
+        <!-- tfoot es el pie de pagina-->
+        <tfoot>
+            <tr>Esto es un ejemplo chulo de tablas</tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

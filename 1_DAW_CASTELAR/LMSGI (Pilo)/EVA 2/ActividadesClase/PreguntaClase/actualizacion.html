@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambia un alumno</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <div>
+        <nav id="menu">
+            <a href="index.html" id="insertar">Insertar</a>
+            <a href="eliminacion.html" id="eliminacion">Eliminar</a>
+            <a href="actualizacion.html" id="ver">Actualizar</a>
+            <a href="consulta.html" id="hacer">Hacer consulta</a>
+            <a href="tabla.php" id="consulta">Ver tabla</a>
+            <a href="login.html" id="login">Logeate</a>
+
+        </nav>
+        <form action="actualizacion.php" method="post">
+            <p id="creador">Número de Expediente del alumno a cambiar</p>
+            <input type="text" name="nexpediente" placeholder="dawxxxx" required> <br>
+            <p id="creador">Actualizar Alumno</p>
+            <select name="campo" style="border-radius: 10px;padding:5px;">
+                <option value="notaLM">Nota de Lenguaje de Marcas</option>
+                <option value="notaED">Nota Entornos de Desarrollo</option>
+                <option value="notaBD">Nota Base de Datos</option>
+                <option value="notaSI">Nota Sistemas</option>
+                <option value="notaPR">Nota Programacion</option>
+            </select>
+            <input type="text" name="num" placeholder="Nueva nota">
+            <br>
+            <br><input type="submit" value="Guardar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+</form>
+</div>
+</body>
+
+</html>

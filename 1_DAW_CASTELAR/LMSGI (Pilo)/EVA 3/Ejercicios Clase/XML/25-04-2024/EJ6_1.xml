@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pueblo>
+    <habitante>
+        <nombre>Yago Catalano</nombre>
+        <direccion>
+            <calle>Calle Los Buñuelos</calle>
+            <numero>13</numero>
+            <piso>0</piso>
+        </direccion>
+        <email>yago@gmail.com</email>
+        <mascota>Perro</mascota>
+    </habitante>
+    <habitante>
+        <nombre>Fernando Alonso</nombre>
+        <direccion>
+            <calle>Avenida Monaco</calle>
+            <numero>33</numero>
+            <piso>14</piso>
+        </direccion>
+        <email>AlonsoFernando@gmail.com</email>
+        <mascota>Melissa</mascota>
+    </habitante>
+</pueblo>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salario Neto</title>
+    <script>
+        function calcularSalarioNeto() {
+            let salariob = parseFloat(document.getElementById("salariob").value);
+            let deducciones = parseFloat(document.getElementById("deducciones").value);
+
+            let salarion = salariob - deducciones;
+
+            document.getElementById("salarion").value = salarion.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Calculadora de Salario Neto</h2>
+
+    <form id="form-salario">
+        <input type="number" id="salariob" name="salariob" required>
+        <input type="text" disabled id="salarion"><br><br>
+        <select id="deducciones" name="deducciones">
+    <option value="0">Sin desgravaciones</option>
+    <option value="100">STOP Guerra Ucrania</option>
+    <option value="50">Iglesia</option>
+  </select><br><br>
+        <button type="button" onclick="calcularSalarioNeto()">Calcular Salario Neto</button>
+    </form>
+
+
+
+</body>
+
+</html>

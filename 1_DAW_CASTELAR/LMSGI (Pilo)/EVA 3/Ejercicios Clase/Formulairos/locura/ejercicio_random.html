@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <form action="procesa.php" method="post">
+        <span>Nombre:</span>
+        <input type="text" name="nombre" placeholder="Nombre">
+        <span>Apellidos:</span>
+        <input type="text" name="apellidos" placeholder="Apellidos">
+        <span>DNI:</span>
+        <input type="text" name="dni" placeholder="DNI">
+        <span>Edad:</span>
+        <input type="number" name="edad" placeholder="Edad">
+        <span>Direccion:</span>
+        <input type="text" name="direccion" placeholder="Dirección">
+        <span>Código Postal:</span>
+        <input type="number" name="cpostal" placeholder="Codigo Postal">
+        <span>Desgravación:</span>
+        <select name="desgrava">
+            <option value="0" selected>Ninguna desgravación</option>
+            <option value="1">UNICEF</option>
+            <option value="2">STOP Guerra Ucrania</option>
+            <option value="3">Ayuda Niños Gaza</option>
+            <option value="4">Iglesia</option>
+        </select>
+        <span>Situación Laboral:</span>
+        <select name="situacion_labo">
+            <option value="Jubilado">Jubilado</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Autonomo">Autónomo</option>
+            <option value="Por_Cuenta_Propia">Por Cuenta Propia</option>
+            <option value="Funcionario">Funcionario</option>
+        </select>
+        <span>Salario Bruto:</span>
+
+        <input type="number" name="salario_bruto" placeholder="Salario Bruto">
+        <input type="hidden" name="salario_neto">
+        <input type="hidden">
+        <input type="submit" class="botones" value="Guardar">
+        <input type="reset" value="Cancelar">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+body {
+    background-color: #edc79b;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    /* aqui el top 0 es muy importante porque sino el navbar no hace lo que yo quiero que es que te acompañe segun scroleas */
+    background-color: #edc79b;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 302px;
+    border-bottom: 2px solid #0F5257;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.navbar-logo {
+    height: 50px;
+    fill: #1D726F;
+    padding-right: 450px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0px;
+    gap: 15px;
+}
+
+.navbar-links a:hover {
+    color: #1D726F;
+}
+
+.navbar-links li {
+    white-space: nowrap;
+    margin: 0 15px;
+    padding: 0px 5px 0px;
+    font-weight: 500;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #32a39f;
+    font-size: 20px;
+}
+
+section {
+    margin: 0 300px;
+    padding: 55px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 20px;
+}
+
+#sec0,
+#sec2 {
+    background-color: #edc79b;
+    color: #A44A3F;
+}
+
+#sec1 {
+    background-color: #0F5257;
+    color: #F1DEC6;
+}
+
+.title {
+    color: #A44A3F;
+    font-size: 50px;
+    margin-bottom: 0px;
+    white-space: nowrap;
+}
+
+#title-about {
+    white-space: nowrap;
+    color: #F1DEC6;
+    margin-top: 0px;
+    width: 138px;
+    font-size: 28px;
+}
+
+#title-about {
+    width: fit-content;
+    border-bottom: #F1DEC6 2px solid;
+    /*Le pongo un borde abajo de decoracion*/
+}
+
+.title,
+#title-contact {
+    width: fit-content;
+    border-bottom: #000000 2px solid;
+    /*Le pongo un borde abajo de decoracion*/
+
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.content-container p {
+    margin: 0;
+    flex: 1;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+#profile {
+    height: 300px;
+    width: auto;
+    margin-left: 80px;
+    box-shadow: 35px 35px 0px #1D726F;
+    border: 8px solid #edc79b;
+}
+
+.location-icon,
+.availability {
+    height: 25px;
+    width: 25px;
+}
+
+.availability-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.availability-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.availability-item img {
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.about-image {
+    height: 400px;
+    width: auto;
+    margin-right: 80px;
+    box-shadow: 35px 35px 0px #F1DEC6;
+    border: 8px solid #0F5257;
+    /*Le pongo box-shadow y borde para que le de un efecto mejor que si solo tuviese la sombra*/
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.logito {
+    width: 30px;
+}
+
+.logito:hover {
+    transform: scale(1.1);
+    /*Al pasar el cursor por encima hacce la imagen un poco mas grande*/
+}

@@ -1,0 +1,35 @@
+<?php require_once("librerias/conexion.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logeate!</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <div>
+        <form action="actualizacion.php" method="post">
+            <p id="creador">Inicio usuario</p>
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <p id="creador">Cambiar pregunta</p>
+            <input type="text" name="id" placeholder="Id"><br>
+            <input type="text" name="pregunta" placeholder="Pregunta"><br>
+            <br><input type="text" name="op1" placeholder="Opción 1">
+            <input type="text" name="op2" placeholder="Opción 2">
+            <br><input type="text" name="op3" placeholder="Opción 3">
+            <input type="text" name="op4" placeholder="Opción 4"> <br>
+            <br><input type="text" name="buena" placeholder="Respuesta buena">
+            <input type="text" name="examen" placeholder="Código de examen"><br>
+            <br><input type="submit" value="Guardar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+            <a href="eliminacion.html" id="enlace">Eliminacion</a>
+            <a href="index.html" id="enlace ">Insertar</a>
+        </form>
+    </div>
+</body>
+
+</html>

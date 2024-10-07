@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de contacto</title>
+    <style>
+        h1,p{text-align: center;}
+        table{width:370px; font-size: 11px;}
+        label{margin-right: 7px;font-weight: bold;font-size: 12px;} 
+        #enviar{width:130px;height: 35px; font-weight: bold;}
+        :focus{background-color: yellow; border: 2px solid;}
+    </style>
+</head>
+<body>
+    <h1>Registro de nuevo usuario</h1>
+    <p>Disfruta de un descuento promocional de 30<br>
+        euros. Solo hasta el fin de existencias
+    </p>
+    
+    <fieldset id="personales">
+        <table>
+            <tr><td><label for="nombre">Nombre</label></td>
+                <td><input type="text" id="nombre"></td>
+            </tr>
+            <tr><td><label for="ape">Apellidos</label></td>
+                <td><input type="text" id="ape"></td>
+            </tr>
+            <tr><td><label for="tele">Telefono</label></td>
+                <td><input type="text" id="tele" name="" id=""></td>
+            </tr>
+            <tr><td><label for="gen">Género</label></td>
+                <td><input type="radio" id="gen" 
+                     value="nombre">Hombre</input>
+                    <input type="radio" id="gen" 
+                    value="mujer">Mujer </input></td>
+            </tr>
+            <tr><td><label for="email">E-main</label></td>
+                <td><input type="text" id="email"></td>
+            </tr>
+        </table>
+    </fieldset>
+    
+        <table>
+            <tr><td><label for="">Fecha de nacimiento</label></td>
+                <td><select name="dia" id="">
+                    <option value="">Día</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select></td>
+                <td><select name="mes" id="">
+                    <option value="">Mes</option>
+                    <option value="">Enero</option>
+                    <option value="">Febrero</option>
+                    <option value="">Marzo</option>
+                </select></td>
+                <td><select name="" id="">
+                    <option value="">Año</option>
+                    <option value="">1967</option>
+                    <option value="">1968</option>
+                    <option value="">1969</option>
+                    <option value="">1970</option>
+                    <option value="">1971</option>
+                </select></td>
+            </tr>
+            <tr><td><label for="">Lenguaje</label></td>
+                <td><select name="" id="">
+                    <option value="">Español</option>
+                    <option value="">Catalan</option>
+                    <option value="">Vasco</option>
+                    <option value="">Gallego</option>
+                    <option value="">Castuo</option>
+                </select></td>
+            </tr>
+        </table>
+        <br>
+        <label for="">Código promocional</label>
+        <input type="text" size="16"><br><br>
+        <input type="checkbox">He leido y acepto las condiciones de esta promoción y la <br>
+            política de protección de datos. Todos tus datos pasaran a un fichero de nuestro uso exclusivo.
+            tus datos no <br> serán facilitados a terceros</input><br><br>
+        <input type="submit" id="enviar" value="SOLICITUD">
+    
+</body>
+</html>

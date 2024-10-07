@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de inversiones</title>
+    <style>
+        fieldset {
+          text-align: center;
+        }
+    
+        legend {
+          display: block;
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <form action="procesar_simulacion.php" method="post">
+        <fieldset style="font-size: large; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:blue">
+            <legend class="center-legend">Datos del cliente</legend>
+            <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="dni">DNI/CIF/NIE:</label>
+        <input type="text" id="dni" name="dni" required>
+    
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </fieldset>
+  
+        
+    <fieldset style="font-size: large; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:blue">
+        <legend>Datos de la operación</legend>
+        <label for="capital_inicial">Capital inicial:</label>
+        <input type="number" id="capital_inicial" name="capital_inicial" required>
+    
+        <label for="aportacion_anual">Aportación anual:</label>
+        <input type="number" id="aportacion_anual" name="aportacion_anual" required>
+    
+        <label for="intereses_aplicados">Intereses aplicados (%):</label>
+        <input type="number" id="intereses_aplicados" name="intereses_aplicados" required>
+    
+        <label for="num_anios">Número de años:</label>
+        <input type="number" id="num_anios" name="num_anios" required>
+    
+    </fieldset> <br>
+    <fieldset>
+        <input type="submit" value="Iniciar la simulación">
+        <input type="reset" value="Restablecer los datos introducidos">
+    </fieldset><br>
+       <fieldset>
+        <label for="capital_inicial">Capital Inicial:</label>
+        <input type="number" id="capital_inicial" name="capital_inicial" required>
+        
+        <label for="intereses_aplicados">Intereses Aplicados (%):</label>
+        <input type="number" id="intereses_aplicados" name="intereses_aplicados" required>
+        
+        <label for="num_anios">Número de Años:</label>
+        <input type="number" id="num_anios" name="num_anios" required>
+        
+        <button type="submit">Calcular</button>
+    </fieldset>
+    
+    </form>
+    
+</body>
+</html>

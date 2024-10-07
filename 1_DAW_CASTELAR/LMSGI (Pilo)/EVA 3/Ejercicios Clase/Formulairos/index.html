@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo</title>
+    <script>
+        function BotonAcepta() {
+            // Recoger en una variable el contenido de un campo
+            // Me refiero al campo a traves del id de ese campo
+            let cuotaSindical = document.getElementsById("input").value;
+            // o traves del nombre/name
+            let cuotaSindical2 = document.getElementsByName("user")[0].value;
+            // Ahora cargamos un campo con el valor que hemos sacado antes.
+            document.getElementsById("aDevolver")[0].value = devolHacienda;
+
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <form action="#" method="post">
+            <input type="text" name="user" id="input" size="50px"> <br>
+            <input type="button" name="acepta" onclick="BotonAcepta()">
+        </form>
+    </main>
+</body>
+
+</html>

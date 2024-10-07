@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cartelera>
+    <pelicula genero="terror">
+        <titulo>IT</titulo>
+        <director>Andrés Muschietti</director>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <duracion>193</duracion>
+    </pelicula>
+    <pelicula genero="comedia">
+        <titulo>Padre no hay más que uno 2</titulo>
+        <director>Santiago Segura</director>
+        <nacionalidad>España</nacionalidad>
+        <duracion>96</duracion>
+    </pelicula>
+</cartelera>

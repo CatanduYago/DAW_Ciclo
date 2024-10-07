@@ -1,0 +1,36 @@
+<?php require_once("conexion.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta un alumno</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <div>
+        <nav id="menu">
+            <a href="index.html" id="insertar">Insertar</a>
+            <a href="eliminacion.html" id="eliminacion">Eliminar</a>
+            <a href="actualizacion.html" id="ver">Actualizar</a>
+            <a href="consulta.html" id="consulta">Hacer consulta</a>
+            <a href="tabla.php" id="consulta">Ver tabla</a>
+            <a href="login.html" id="login">Logeate</a>
+
+        </nav>
+        <form action="consulta.php" method="get">
+            <p id="creador">Consulta un Alumno</p>
+            <input type="text" name="nexpediente" placeholder="dawxxxx"> <br> <br>
+            <br><input type="submit" value="Consultar" id="guardar">
+            <input type="reset" value="Cancelar" id="cancelar">
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

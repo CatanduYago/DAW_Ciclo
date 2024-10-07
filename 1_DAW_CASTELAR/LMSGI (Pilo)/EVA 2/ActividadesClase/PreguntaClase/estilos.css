@@ -1,0 +1,104 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    background-color: #ffffee;
+}
+
+div {
+    background-image: url('img/');
+    background-size: cover;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 25px;
+    width: auto;
+    margin: auto;
+}
+
+#creador {
+    font-size: 20px;
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #ffffee;
+    font-weight: normal;
+}
+
+#guardar {
+    background-color: #96c723;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#cancelar {
+    background-color: #c72323;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#guardar:hover,
+#cancelar:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#eliminacion:hover,
+#insertar:hover,
+#consulta:hover,
+#ver:hover,
+#hacer:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 6px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+
+span {
+    margin: 5px;
+    font-size: 15px;
+}
+
+#insertar,
+#eliminacion,
+#ver,
+#hacer,
+#consulta,
+#login {
+    background-color: #96c723;
+    color: white;
+}
+
+#login:hover {
+    color: black;
+    cursor: pointer;
+}

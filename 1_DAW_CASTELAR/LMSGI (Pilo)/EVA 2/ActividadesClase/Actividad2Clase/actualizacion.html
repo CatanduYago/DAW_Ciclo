@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualiza un empleado</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <div>
+
+        <nav id="menu">
+            <a href="index.html" id="insertar">Insertar</a>
+            <a href="eliminacion.html" id="eliminacion">Eliminar</a>
+            <a href="actualizacion.html" id="ver">Actualizar</a>
+            <a href="consulta.html" id="consulta">Hacer consulta</a>
+            <a href="tabla.php" id="consulta">Ver tabla</a>
+            <a href="login.html" id="login">Logeate</a>
+        </nav>
+        <form action="actualizacion.php" method="post">
+            <p id="creador">Actualizar empleado</p>
+            <input type="text" name="nss" placeholder="Nº Seguridad Social"> <br> <br>
+            <select name="campo" id="campo">
+                <option value="salar">Salario</option>
+                <option value="dire">Dirección</option>
+                <option value="turno">Turno</option>
+            </select>
+            <input type="text" name="cambio" placeholder="Registro a cambiar"><br><br>
+            <input type="submit" value="Actualizar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+        </form><br>
+        <hr width="100%" style="color: black;height:2px;background-color:black">
+        <form action="actualiza_tipo.php" method="post">
+            <p id="creador">Actualizar tipo de empleado</p>
+            <input type="text" name="nss" placeholder="Nº Seguridad Social"> <br> <br>
+            <select name="tipo" id="tipo">
+                <option value="0">Asalariado</option>
+                <option value="1">Personal Laboral</option>
+            </select> <br><br> <input type="submit" value="Actualizar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+        </form> <br>
+        <hr width="100%" style="color: black;height:2px;background-color:black">
+        <form action="actualiza_puesto.php">
+            <p id="creador">Actualizar puesto del empleado</p>
+            <input type="text" name="nss" placeholder="Nº Seguridad Social"> <br> <br>
+            <select name="puesto" id="puesto">
+                <option value="0">Administrativo</option>
+                <option value="1">Contable</option>
+                <option value="2">Ingeniero</option>
+                <option value="3">Técnico</option>
+                <option value="4">Comercial</option>
+            </select> <br><br>
+            <input type="submit" value="Actualizar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+        </form>
+    </div>
+</body>
+
+</html>

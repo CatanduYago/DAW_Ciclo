@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+</head>
+
+<body>
+    <script>
+        function calcularCostoTotal() {
+            const impuestos = 0.21;
+            const gastosEnvio = 5;
+            const codigoVIP = "CVIP";
+
+            let numArticulos = parseInt(prompt("Ingrese el número de artículos que desea comprar: "));
+            let costoTotal = 0;
+            let esVIP = false;
+
+            let codigoIngresado = prompt("Ingrese su código VIP (si no tiene, deje este campo en blanco): ");
+            if (codigoIngresado === "CVIP") {
+                esVIP = true;
+            }
+
+            for (let i = 0; i < numArticulos; i++) {
+                let precioSinImpuestos = parseFloat(prompt("Ingrese el precio del artículo " + (i + 1) + " (sin impuestos ni costes): "));
+
+                let costoConImpuestos = precioSinImpuestos * (1 + impuestos);
+                costoTotal += costoConImpuestos;
+            }
+
+            if (!esVIP) {
+                costoTotal += gastosEnvio;
+            }
+
+            alert("El costo total de su compra para " + numArticulos + " artículo(s) es: €" + costoTotal.toFixed(2));
+        }
+
+        calcularCostoTotal();
+    </script>
+</body>
+
+</html>

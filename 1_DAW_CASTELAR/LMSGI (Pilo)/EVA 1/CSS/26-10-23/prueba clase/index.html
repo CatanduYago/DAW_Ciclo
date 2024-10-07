@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de selectores</title>
+    <style>
+        
+        /*Selector universal*//*
+        *{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: red;}
+        /*Selector de descendientes*//*
+        p a { font-family:'Courier New', Courier, monospace;
+        font-size: 4em;
+        color: blue;
+       }
+       p.ejemplo a {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2em;
+        color: cyan;
+       }
+       p#identificador a { 
+        color:green;
+    }
+       /*Selector de hijo*//*
+       p > a { font-family:'Courier New', Courier, monospace;
+        font-size: 4em;
+        color: yellow;
+       }
+       /*Selector de nieto*//*
+       p * a { font-family:'Courier New', Courier, monospace;
+        font-size: 4em;
+        color: green;
+       } 
+       */
+       
+
+    </style>
+</head>
+
+<body>
+    <form action="procesa.php" method="post">
+        <input type="radio" name="estadoCivil" value="casado">casado <br>
+        <input type="radio" name="estadoCivil" value="separado"> separado <br>
+        Aficiones <br>
+        <input type="checkbox" name="Aficiones[]" value="deportes"> Deportes <br>
+        <input type="checkbox" name="Aficiones[]" value="lectura"> Lectura <br>
+        <input type="checkbox" name="Aficiones[]" value="comer"> Comer <br>
+        <input type="submit" caption="procesa">
+        <input type="reset" name="" id="" caption="cancelar"> <br>
+        
+
+    </form>
+</body>
+
+</html>

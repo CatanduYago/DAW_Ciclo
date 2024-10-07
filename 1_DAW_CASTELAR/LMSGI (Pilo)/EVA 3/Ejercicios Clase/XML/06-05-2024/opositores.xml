@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oposicion>
+    <opositor>
+        <nombre>Juan Pérez</nombre>
+        <especialidad>Informática</especialidad>
+        <nota>8.5</nota>
+        <comunidad>
+            <descripcion>Comunidad de Madrid</descripcion>
+            <provincia>Madrid</provincia>
+            <orden>1</orden>
+        </comunidad>
+    </opositor>
+    <opositor>
+        <nombre>María López</nombre>
+        <especialidad>Economía</especialidad>
+        <nota>7.9</nota>
+        <comunidad>
+            <descripcion>Comunidad Valenciana</descripcion>
+            <provincia>Valencia</provincia>
+            <orden>2</orden>
+        </comunidad>
+    </opositor>
+    <opositor>
+        <nombre>Carlos Ruiz</nombre>
+        <especialidad>Derecho</especialidad>
+        <nota>9.2</nota>
+        <comunidad>
+            <descripcion>Andalucía</descripcion>
+            <provincia>Sevilla</provincia>
+            <orden>3</orden>
+        </comunidad>
+    </opositor>
+</oposicion>

@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-right: 25px;
+}
+
+.contenedor {
+  max-width: 1280px;
+  margin: auto;
+}
+
+header {
+  background: url(../imagenes/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #000;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.contenedor-titulo {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.contenedor-titulo a, #sobre-mi a, #blog a, #que-esperas a, #contacto input[type="submit"] {
+  font-size: 14px;
+  color: #fff;
+  background: #5cb8ff;
+  padding: 14px 24px;
+  width: 128px;
+  display: inline-block;
+}
+
+p.logo {
+  font-size: 20px;
+}
+
+nav ul li a {
+  color: #000;
+}
+
+/* SECCION DE SOBRE MI */
+
+h3 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+#sobre-mi .contenedor-sobremi {
+  display: flex;
+  justify-content: space-around;
+}
+
+#sobre-mi .texto {
+  width: 42%;
+}
+
+/* SECCION SERVICIOS */
+
+.contenedor-servicios {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.servicio {
+  width: 24%;
+  padding: 34px 30px 38px 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.servicio h4 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.servicio p {
+  margin-bottom: 20px;
+  height: 194px;
+}
+
+.contenedor-servicios .violeta {
+    background: #5055df;
+    box-shadow: 0 12px 30px 0 rgba(80, 85, 223, .37);
+}
+.contenedor-servicios .celeste {
+    background: #40a8f9;
+    box-shadow: 0 12px 30px 0 rgba(86, 163, 222, .3);
+}
+
+.ondas {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.icono {
+  float: right;
+}
+
+/* SECCION MIS TRABAJOS */
+
+button.owl-prev, button.owl-next {
+    font-size: 40px !important;
+}
+
+span {
+    color: #71bcfa;
+}
+
+#mis-trabajos p {
+  text-align: center;
+color: #000;
+}
+
+/* SECCION POR QUE TRABAJAR CONMIGO */
+
+.contenedor-trabajar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#por-que-trabajar .item {
+  width: 28%;
+  text-align: center;
+}
+
+#por-que-trabajar ul li {
+  list-style: none;
+}
+
+#por-que-trabajar ul li:nth-child(2) {
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#por-que-trabajar ul li:nth-child(3) {
+  line-height: 31px;
+}
+
+/* SECCION BLOG */
+
+#blog {
+  background: #F9FAFC;
+}
+
+#blog .contenedor-publicaciones {
+  display: flex;
+  justify-content: space-around;
+}
+
+#blog .publicacion {
+  width: 30%;
+  box-shadow: 1px 1px 14px #ccc;
+}
+
+#blog img {
+    width: 100%;
+}
+
+#blog .contenido {
+  background: #fff;
+  padding: 20px;
+}
+
+#blog h4 {
+  font-size: 23px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#blog p {
+  color: #5A6169;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+#blog a {
+  width: 87px;
+}
+
+/* SECCION QUE ESPERAS */
+
+#que-esperas {
+  background: linear-gradient(rgba(84,93,220,.94), rgba(96,171,245,.9));
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 40px;
+}
+
+#que-esperas h3 {
+  font-size: 23px;
+  color: #fff;
+}
+
+#whatsapp {
+  position: fixed;
+  top: 80%;
+  right: 1%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#mis-trabajos, #sobre-mi, #por-que-trabajar, #blog, #contacto {
+  padding: 90px 0;
+}
+
+#servicios {
+  padding: 70px 0;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
+.menu-icon {
+  display: block;
+float: right;
+width: 37px;
+height: 25px;
+margin-top: 0px;
+}
+
+header nav {
+  position: absolute;
+  top: 83px;
+  left: 0;
+  height: 268px;
+  background: #5cb8ff;
+  width: 100%;
+  display: none;
+}
+
+header nav ul {
+  flex-direction: column;
+}
+
+header nav ul li {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+#sobre-mi .contenedor-sobremi {
+    flex-direction: column;
+}
+
+#sobre-mi img {
+  width: 100%;
+}
+
+#sobre-mi .texto {
+    width: 100%;
+}
+
+.contenedor-servicios {
+    flex-direction: column;
+}
+
+.servicio {
+  width: 82%;
+  padding: 34px 30px 69px 30px;
+}
+
+.icono {
+    margin-top: 23px;
+}
+
+h3 {
+  font-size: 43px;
+}
+
+.contenedor-trabajar {
+    flex-direction: column;
+}
+
+.item ul {
+    padding: 0;
+}
+
+#blog .contenedor-publicaciones {
+    flex-direction: column;
+}
+
+#blog .publicacion {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+}
+
+@media (min-width: 600px) and (max-width:800px) {
+  header {
+    height: 70vh;
+  }
+
+  .servicio {
+    width: 57%;
+    padding: 34px 30px 69px 30px;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+#blog .publicacion {
+    width: 71%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+}

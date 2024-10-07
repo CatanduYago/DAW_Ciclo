@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title >Formulario de Contacto</title>
+</head>
+<body style="background-color: #f0f0f0;">
+    <div style=" height:1080px ;margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 20px;">
+        <h2 style="color: #FCBF49;"> CONTACTA CON NOSOTROS RELLENANDO EL FORMULARIO </h2>
+        <form action="procesa.php" method="post">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" >
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" >
+            </div>
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="text   " id="correo" name="correo" >
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar </button>
+        </form>
+    </div>
+</body>
+</html>

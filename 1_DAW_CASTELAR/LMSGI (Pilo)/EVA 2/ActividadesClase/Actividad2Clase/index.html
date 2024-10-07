@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añade un empleado</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <div>
+
+        <nav id="menu">
+            <a href="index.html" id="insertar">Insertar</a>
+            <a href="eliminacion.html" id="eliminacion">Eliminar</a>
+            <a href="actualizacion.html" id="ver">Actualizar</a>
+            <a href="consulta.html" id="consulta">Hacer consulta</a>
+            <a href="tabla.php" id="consulta">Ver tabla</a>
+            <a href="login.html" id="login">Logeate</a>
+        </nav>
+        <form action="index.php" method="post">
+            <p id="creador">Añadir empleado</p>
+            <input type="text" name="nss" placeholder="Nº Seguridad Social">
+            <input type="text" name="nom" placeholder="Nombre ">
+            <input type="text" name="ape" placeholder="Apellidos">
+            <input type="text" name="salar" placeholder="Salario">
+            <input type="text" name="dire" placeholder="Dirección"><br><br>
+            <input type="text" name="turno" placeholder="Turno">
+            <select name="tipo" id="">
+                <option value="0">Asalariado</option>
+                <option value="1">Personal Laboral</option>
+            </select>
+            <select name="puesto" id="">
+                <option value="0">Administrativo</option>
+                <option value="1">Contable</option>
+                <option value="2">Ingeniero</option>
+                <option value="3">Tecnico</option>
+                <option value="4">Comercial</option>
+            </select>
+            <input type="text" name="descripcion" placeholder="Descripción del trabajo"><br><br>
+            <input type="submit" value="Guardar" id="guardar">
+            <input type="reset" value="Borrar" id="cancelar">
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+div {
+    width: auto;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#creador {
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 10px;
+    padding: 6px;
+    width: max-content;
+    font-weight: bold;
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #ffffee;
+    font-weight: normal;
+}
+
+#guardar {
+    background-color: #57c723;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#cancelar {
+    background-color: #d82929;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+form {
+    padding: 10px;
+    margin: 15px;
+}
+
+#form2 {
+    border: 2px solid black;
+}

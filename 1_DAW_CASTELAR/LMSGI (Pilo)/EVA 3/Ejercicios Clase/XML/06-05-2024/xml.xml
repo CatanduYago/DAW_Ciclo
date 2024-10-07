@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+  <libro>
+    <autor>J.K. Rowling</autor>
+    <titulo>Harry Potter y la Piedra Filosofal</titulo>
+    <ISBN>978-84-8386-001-1</ISBN>
+    <precio>22.95</precio>
+  </libro>
+  <libro>
+    <autor>J.R.R. Tolkien</autor>
+    <titulo>El Señor de los Anillos</titulo>
+    <ISBN>978-84-206-1936-4</ISBN>
+    <precio>50.00</precio>
+  </libro>
+  </libreria>

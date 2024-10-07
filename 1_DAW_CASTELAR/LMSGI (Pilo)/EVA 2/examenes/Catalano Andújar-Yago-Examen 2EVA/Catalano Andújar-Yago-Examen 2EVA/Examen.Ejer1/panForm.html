@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añade un empleado</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <div>
+        <form action="procesar.php" method="post">
+            <p id="creador">Introducir los datos del empleado</p>
+            <span>Nombre:</span>
+            <input type="text" name="nom" placeholder="Nombre"> <br><br>
+            <span>Apellido:</span>
+            <input type="text" name="ape" placeholder="Apellido"> <br><br>
+            <span>Categoria profesional:</span>
+
+            <select name="categoria">
+                <optgroup label="Grupo A"> 
+                    <option value="Profesor">Profesor Secundaria</option>
+                    <option value="Jefe_Servicios">Jefe de Servicios Adm.Publica</option>
+                    <option value="Economista">Economista Adm.Publica</option>
+                    <option value="Abogado">Abogado</option>
+                    <option value="Ingeniero">Ingeniero</option>
+                </optgroup>
+
+                <optgroup label="Grupo B">
+                    <option value="Maestro">Maestro Primaria</option>
+                    <option value="ing_tec">Ing. Técnico</option>
+                    <option value="tec_si_inf">Tec. Sistemas Informaticos</option>
+                </optgroup>
+                <optgroup label="Grupo c">
+                    <option value="administrativo">Administrativo</option>
+                    <option value="aux">Aux. Enfermeria</option>
+                </optgroup>
+            </select>
+            <span>Nº de la Seguridad Social:</span>
+            <input type="text" name="nss" placeholder=""><br><br>
+            <span>Salario Bruto:</span>
+            <input type="text" name="salariob" placeholder=""><br><br>
+            <span>Aplicar Desgravación (Seleccione lo que proceda)</span><br><br>
+            <input type="radio" value="Sí" name="desgravacion"> <b>Aplique desgravacion</b><br><br>
+            <input type="radio" value="No" name="desgravacion"> <b>No aplique desgravación</b><br><br>
+            <span>Concepto por el que desgrava:</span>
+            <select name="concepto" id="">
+                <option value="medicos">Médicos Sin Fronteras</option>
+                <option value="ucrania">STOP guerra Ucrania</option>
+                <option value="save">Save The Children</option>
+                <option value="acnur">ACNUR</option>
+            </select>
+            <span>Salario Neto:</span>
+            <input type="text" name="salarion" disabled>
+            <br><br>
+            <input type="submit" value="Calcular y guardar" id="guardar">
+            <input type="reset" value="Borrar datos de la pantalla" id="cancelar">
+        </form>
+        <form action="consultar.php">
+            <input type="submit" value="Consultar datos de los empleados" id="guardar">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Formulario de datos personales</title>
+</head>
+
+<body>
+    <h1>Formulario de datos personales</h1>
+    <form id="form2" action="procesar.php">
+        <div>
+            <h3>Datos personales</h3>
+            <span>Nombre y apellidos:</span>
+            <input type="text" name="nomyape">
+            <span>DNI/NIE:</span>
+            <input type="text" name="dni">
+            <span>Edad:</span>
+            <input type="number" name="edad"><br> <br>
+            <span>Dirección:</span>
+            <input type="text" name="direccion">
+            <span>Código postal:</span>
+            <input type="text" name="cp"> <br> <br>
+            <span>Estado civil:</span>
+            <select name="estado_civil">
+        <option value="soltero">Separado/a</option>
+        <option value="casado">Casado/a</option>
+        <option value="viudo">Viudo/a</option>
+        <option value="divorciado">Divorciado/a</option>
+      </select>
+        </div>
+        <form name="situacion_laboral">
+            <h3>Datos Laborales</h3>
+            <span>Situación laboral:</span> <br> <br>
+            <input type="radio" value="Empleado"> Empleado
+            <input type="radio" value="Cuenta_propia">Trabajador Por Cuenta Propia <br>
+            <input type="radio" value="Desempleado"> Desempleado
+            <input type="radio" value="Cuenta_ajena">Trabajador Por Cuenta Ajena
+
+        </form>
+
+        <h3>Inserción de datos</h3>
+        <input type="submit" value="Grabar">
+        <input type="reset" value="Restablecer">
+    </form>
+    <form id="form2" action="consulta.php">
+        <h3>Consulta de información</h3>
+        <span>Introduzca el DNI del usuario:</span>
+        <input type="text" name="dni_consulta">
+        <button type="submit">Consultar</button>
+        <button type="submit">Cancelar operación</button>
+    </form>
+    <form id="form2" action="eliminar.php">
+        <h3>Borrar datos del usuario</h3>
+        <span>Introduzca el DNI del usuario:</span>
+        <input type="text" name="dni_borrar">
+        <button type="submit">Borrar datos</button>
+        <button type="submit">Cancelar operación</button>
+    </form>
+    </form>
+</body>
+
+</html>

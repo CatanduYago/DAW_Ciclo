@@ -1,0 +1,1 @@
+(input("¿Qué estás estudiando? "))

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <form action="ficha.php" method="post" enctype="multipart/form-data">
+        
+        <div class="container-form">
+            <div class="items-form">
+                <label for="nombre">Introduce tu nombre:</label>
+                <input id="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="items-form">
+                <label for="apellidos">Introduce tus apellidos:</label>
+                <input id="apellidos" type="text" name="apellidos" required>
+            </div>
+            <div class="items-form">
+                <label for="email">Introduce tu email:</label>
+                <input id="email" type="email" name="email">
+            </div >
+            <div class="items-form">
+                <label for="fechanacimiento">Introduce tu fecha de nacimiento:</label>
+                <input id="fechanacimiento" type="date" name="fechanacimiento">
+            </div>
+            <div class="items-form">
+                <label for="sexo">Selecciona tu sexo:</label>
+                <input id="sexo" type="radio" name="sexo" value="H"> Hombre
+                <input id="sexo" type="radio" name="sexo" value="M"> Mujer
+                <input id="sexo" type="radio" name="sexo" value="O"> Otro
+                <input id="sexo" type="radio" name="sexo" value="X"> Prefiero no responder
+            </div>
+            <div class="items-form">
+                <label for="aficiones">Aficiones:</label>
+                <input id="aficiones" type="checkbox" name="aficiones[]" value="INF"> Informatica
+                <input id="aficiones" type="checkbox" name="aficiones[]" value="LEC"> Lectura
+                <input id="aficiones" type="checkbox" name="aficiones[]" value="DEP"> Deporte
+            </div>
+            <div class="items-form"> 
+                <label for="estudios">Nivel de estudios:</label>
+                <select name="estudios" id="estudios">
+                    <option value="">Sin especificar</option>
+                    <option value="sec">Secundaria</option>
+                    <option value="bach">Bachillerato</option>
+                    <option value="tgs">Grado Superior</option>
+                    <option value="grad">Graduado</option>
+                </select>
+            </div>
+            <div class="items-form">
+                <label for="comentarios">Comentarios:</label>
+                <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            </div>
+            <div class="items-form">
+                <label for="imagen">Imagen:</label>
+                <input type="file" name="imagen" id="imagen">
+            </div>
+            <div class="items-form">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+
+
+    </form>
+</body>
+
+</html>

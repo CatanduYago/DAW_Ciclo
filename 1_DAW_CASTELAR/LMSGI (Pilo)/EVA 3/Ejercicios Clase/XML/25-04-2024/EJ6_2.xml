@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipos_informaticos>
+    <equipo>
+        <operario>Carlos García</operario>
+        <sistema_operativo>Windows 10</sistema_operativo>
+        <marca>Dell</marca>
+        <modelo>Inspiron 15</modelo>
+        <tipo>Portátil</tipo>
+        <hardware>
+            <procesador>Intel Core i5</procesador>
+            <memoria>
+                <RAM>8GB</RAM>
+                <HDD>1TB</HDD>
+                <SSD>128GB</SSD>
+            </memoria>
+        </hardware>
+        <conexion_red>
+            <wifi>true</wifi>
+            <ethernet>false</ethernet>
+        </conexion_red>
+    </equipo>
+    <equipo>
+        <operario>María Rodríguez</operario>
+        <sistema_operativo>Ubuntu 20.04</sistema_operativo>
+        <marca>HP</marca>
+        <modelo>EliteDesk 800 G3</modelo>
+        <tipo>Sobremesa</tipo>
+        <hardware>
+            <procesador>Intel Core i7</procesador>
+            <memoria>
+                <RAM>16GB</RAM>
+                <HDD>2TB</HDD>
+                <SSD>256GB</SSD>
+            </memoria>
+        </hardware>
+        <conexion_red>
+            <wifi>false</wifi>
+            <ethernet>true</ethernet>
+        </conexion_red>
+    </equipo>
+</equipos_informaticos>

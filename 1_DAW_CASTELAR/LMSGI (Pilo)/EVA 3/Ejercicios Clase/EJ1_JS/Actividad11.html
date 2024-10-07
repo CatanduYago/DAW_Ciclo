@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        let miArray = [1, 2, 3, 4, 5];
+
+        function mostrarNumeroElementos(array) {
+            alert("Número de elementos: " + array.length);
+        }
+
+        function mostrarContenidoArray(array) {
+            alert("Contenido del array: " + array.join(", "));
+        }
+
+        function añadirElementoArray(array, elemento) {
+            array.push(elemento);
+        }
+
+        mostrarNumeroElementos(miArray);
+        mostrarContenidoArray(miArray);
+
+        let nuevoElemento = prompt("Introduce un nuevo elemento:");
+        if (nuevoElemento !== null) {
+            añadirElementoArray(miArray, nuevoElemento);
+        }
+
+        mostrarNumeroElementos(miArray);
+        mostrarContenidoArray(miArray);
+    </script>
+</body>
+
+</html>

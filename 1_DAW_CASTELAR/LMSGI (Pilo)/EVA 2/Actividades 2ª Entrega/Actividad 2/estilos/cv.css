@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.datos-personales,
+.formacion,
+.experiencia-laboral {
+    max-width: 400px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.datos-personales h1 {
+    text-align: center;
+}
+
+.formacion h1,
+.experiencia-laboral h1 {
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+div {
+    max-width: 75%;
+}

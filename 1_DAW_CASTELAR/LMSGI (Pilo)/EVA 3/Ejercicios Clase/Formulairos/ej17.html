@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="number" id="input1" placeholder="Valor 1">
+        <input type="number" id="input2" placeholder="Valor 2">
+        <select id="forma">
+        <option value="cuadrado">Cuadrado</option>
+        <option value="circulo">Círculo</option>
+        <option value="rectangulo">Rectángulo</option>
+    </select>
+        <button onclick="calcularArea()">Calcular Área</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const valor1 = parseFloat(document.getElementById('input1').value);
+            const valor2 = parseFloat(document.getElementById('input2').value);
+            const forma = document.getElementById('forma').value;
+            let area;
+
+            if (forma === 'cuadrado') {
+                area = valor1 * valor1;
+            } else if (forma === 'circulo') {
+                area = Math.PI * valor1 * valor1;
+            } else if (forma === 'rectangulo') {
+                area = valor1 * valor2;
+            }
+
+            document.getElementById('result').innerText = `El área del ${forma} es: ${area.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>

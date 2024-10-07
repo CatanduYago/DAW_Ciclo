@@ -1,0 +1,55 @@
+.mayusculas {
+    font-size: 30px;
+}
+
+body {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#img1 {
+    border: 2px solid;
+    float: left;
+    margin-left: 20px;
+}
+
+#img2 {
+    border: 2px solid;
+    float: right;
+    margin-right: 20px;
+}
+
+#img3 {
+    margin-left: 0;
+    width: 100px;
+    display: inline-block;
+}
+
+p {
+    margin: 10px;
+    text-align: justify;
+}
+
+p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    max-width: 24px;
+    margin: 5px;
+}

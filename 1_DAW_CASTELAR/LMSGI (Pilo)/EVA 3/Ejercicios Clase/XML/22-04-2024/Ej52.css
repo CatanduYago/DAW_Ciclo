@@ -1,0 +1,36 @@
+libros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+libro {
+    display: block;
+    width: 270px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #b1b1b1;
+}
+
+titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    color: blue;
+}
+
+paginas {
+    margin-top: 10px;
+    color: #d7d7d7;
+}
+
+autor {
+    margin-top: 10px;
+}
+
+editorial {
+    display: block;
+    margin-top: 10px;
+    color: rgb(212, 146, 23);
+}

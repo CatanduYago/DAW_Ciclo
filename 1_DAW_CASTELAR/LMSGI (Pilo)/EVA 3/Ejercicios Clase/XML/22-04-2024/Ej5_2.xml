@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Ej52.css"?>
+
+<libros>
+  <libro>
+    <titulo>El Quijote de la Mancha</titulo>
+    <paginas>500 paginas</paginas>
+    <autor>Miguel de Cervantes Saavedra</autor>
+    <editorial>Editorial: Diana</editorial>
+  </libro>
+  <libro>
+    <titulo>Cien años de soledad</titulo>
+    <paginas>900 paginas</paginas>
+    <autor>Gabriel García Márquez</autor>
+    <editorial>Editorial: Oveja negra</editorial>
+
+  </libro>
+  <libro>
+    <titulo>El lenguaje de programación C</titulo>
+    <paginas>200 paginas</paginas>
+    <autor>Dennis Ritchie</autor>
+    <autor>Brian Kernighan</autor>
+    <editorial>Editorial: Oveja negra</editorial>
+  </libro>
+</libros>

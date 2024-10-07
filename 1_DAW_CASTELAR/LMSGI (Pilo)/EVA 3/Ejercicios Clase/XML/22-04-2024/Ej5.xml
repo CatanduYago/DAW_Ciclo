@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<formulario>
+<usuario>    
+    <correoElectronico>catalano@gmail.com</correoElectronico>
+    <nombreUsuario>yca</nombreUsuario>    
+    <pais>Alemania</pais>    
+    <suscripcionRevista>false</suscripcionRevista>    
+    <fechaEnvio>2024-04-25T15:39:16.693Z</fechaEnvio>
+</usuario>
+<usuario>    
+    <correoElectronico>catalano@gmail.com</correoElectronico>
+    <nombreUsuario>yca</nombreUsuario>    
+    <pais>Alemania</pais>    
+    <suscripcionRevista>false</suscripcionRevista>    
+    <fechaEnvio>2024-04-25T15:39:16.693Z</fechaEnvio>
+</usuario>
+<usuario>    
+    <correoElectronico>catalano@gmail.com</correoElectronico>
+    <nombreUsuario>yca</nombreUsuario>    
+    <pais>Alemania</pais>    
+    <suscripcionRevista>false</suscripcionRevista>    
+    <fechaEnvio>2024-04-25T15:39:16.693Z</fechaEnvio>
+</usuario>
+</formulario>
