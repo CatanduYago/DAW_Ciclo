@@ -47,7 +47,7 @@ services:
     container_name: php-apache
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.php-apache.rule=Host(`TUDOMINIO`)"
+      - "traefik.http.routers.php-apache.rule=Host(`catanduyago.duckdns.org`)"
     volumes:
       - ~/miapp/info.php:/var/www/html/info.php
     restart: unless-stopped
@@ -71,8 +71,18 @@ services:
       - 3001:3001
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.uptime-kuma.rule=Host(`uptime.TUDOMINIO`)"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`uptime.catanduyago.duckdns.org`)"
 ```
+
+## Crear archivo .env
+
+En la misma carpeta donde se ecnuentre tu ``docker-compose.yml`` deberas crear este archivo. Que debe contener:
+```
+SUBDOMAIN=dominio.org
+TOKEN=token
+```
+
+Ahora ya podremos hacer un `docker compose up -d` para montar los contenedores.
 
 ## Eliminar cabecera de la pagina web:
 
@@ -81,13 +91,12 @@ services:
    ``docker exec -it php-apache bash``
 2. Añadir configuraciones de seguridad:
 
-   Si el archivo ya existe, asegúrate de que contenga las líneas necesarias:
-
    `echo 'ServerTokens Prod' >> /etc/apache2/conf-available/security.conf`
 
    `echo 'ServerSignature Off' >> /etc/apache2/conf-available/security.conf`
 
    `echo 'TraceEnable Off' >> /etc/apache2/conf-available/security.conf`
+
 3. Reiniciar Apache:
 
    `service apache2 restart`
