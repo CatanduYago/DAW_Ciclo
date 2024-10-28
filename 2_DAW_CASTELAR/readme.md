@@ -18,7 +18,11 @@ Para conectarnos debemos añadir nuestra clave pública en la máquina virtual. 
    ``sh install-docker.sh``
 3. Ejecutar Docker sin sudo ejecutaremos:
 
-   ``sudo usermod -aG docker $USER``
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
 
 ## Configuración de Docker Compose
 
