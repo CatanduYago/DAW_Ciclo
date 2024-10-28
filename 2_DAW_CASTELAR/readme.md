@@ -78,6 +78,10 @@ services:
       - "traefik.http.routers.uptime-kuma.rule=Host(`uptime.catanduyago.duckdns.org`)"
 ```
 
+``"--api.insecure=true": ``Habilita la API de Traefik sin seguridad, lo que permite acceso sin autenticación a la interfaz de administración.
+
+`` "--providers.docker=true":`` Indica que Traefik debe usar Docker como proveedor, permitiendo que detecte automáticamente los contenedores y sus configuraciones.
+
 ## Crear archivo .env
 
 En la misma carpeta donde se ecnuentre tu ``docker-compose.yml`` deberas crear este archivo. Que debe contener:
