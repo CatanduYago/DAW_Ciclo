@@ -1,0 +1,44 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    networks:
+      - internal_network
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    expose:
+      - 3306
+    restart: always
+
+  php-apache:
+    image: php:apache
+    container_name: php-apache
+    networks:
+      - internal_network
+    ports:
+      - "80:80"
+    volumes:
+      - ./info.php:/var/www/html/info.php
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    networks:
+      - internal_network
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: ${PMA_HOST}
+    restart: always
+
+networks:             # Define la red que usaran los contenedores
+  internal_network:   # Nombre de la red
+    driver: bridge    # Tipo de red
+
+volumes:              # Define el volumen que usara el contenedor
+  mariadb_data:       # proporciona almacenamiento persistente, si se borra o elimina la BD, no se pierde nada

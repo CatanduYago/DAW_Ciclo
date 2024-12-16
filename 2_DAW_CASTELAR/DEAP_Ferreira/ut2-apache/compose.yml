@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - ./html:/var/www/html
+    container_name: apache_container
+

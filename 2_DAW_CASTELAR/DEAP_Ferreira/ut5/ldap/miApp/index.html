@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Configuración de Servicios con Docker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e272e;
+            color: #dcdde1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2f3640;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #00a8ff;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #353b48;
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #44bd32;
+            padding-bottom: 5px;
+            color: #00a8ff;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        pre {
+            background-color: #2f3640;
+            color: #dcdde1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #2f3640;
+            color: #7f8fa6;
+        }
+        footer a {
+            color: #4cd137;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto de Configuración de Servicios con Docker</h1>
+        <p>Arquitectura basada en contenedores con Apache, LDAP y Traefik.</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Características</h2>
+            <ul>
+                <li><strong>Seguridad en Apache:</strong> Desactivación de información sensible en las cabeceras.</li>
+                <li><strong>Autenticación LDAP:</strong> Protege el acceso a contenidos mediante autenticación.</li>
+                <li><strong>Gestión de subdominios:</strong> Utiliza DuckDNS para subdominios dinámicos.</li>
+                <li><strong>Traefik:</strong> Proxy inverso con balanceo de carga integrado.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Servicios</h2>
+            <ul>
+                <li><strong>Traefik:</strong> Proxy inverso que gestiona rutas y balanceo de carga.</li>
+                <li><strong>Servidor PHP-Apache:</strong> Servidor web con soporte PHP y seguridad avanzada.</li>
+                <li><strong>Servidor LDAP:</strong> Gestiona usuarios y autenticación.</li>
+                <li><strong>phpLDAPadmin:</strong> Interfaz gráfica para la administración LDAP.</li>
+                <li><strong>DuckDNS:</strong> Gestión automática de subdominios dinámicos.</li>
+            </ul>
+            <div class="image-section">
+                
+                <img src="https://www.returngis.net/wp-content/uploads/2021/07/Traefik.png" alt="Traefik" style="width: 100px; height: auto;">
+                <img src="https://ampps.com/sitepad-data/uploads/2022/03/php-apache.png" alt="php-apache" style="width: 100px; height: auto;">
+                <img src="https://repository-images.githubusercontent.com/3665191/dd213f80-766c-11e9-8117-6b639095ef99" alt="php-ldapadmin" style="width: 100px; height: auto;">
+                <img src="https://cdn-images-1.medium.com/max/480/1*CFqnzrJ8ynZuSUc27S97ZQ.png" alt="duckdns" style="width: 100px; height: auto;">
+            </div>
+        </section>
+
+        <section>
+            <h2>Archivos Importantes</h2>
+            <ul>
+                <li><code>docker-compose.yaml</code>: Define servicios y dependencias.</li>
+                <li><code>apache-security.conf</code>: Configuraciones avanzadas de Apache.</li>
+                <li>Volúmenes:
+                    <ul>
+                        <li><strong>ldap-data:</strong> Datos persistentes del servidor LDAP.</li>
+                        <li><strong>ldap-config:</strong> Configuraciones del servidor LDAP.</li>
+                        <li><strong>duckdns:</strong> Configuración de DuckDNS.</li>
+                        <li><strong>miApp:</strong> Archivos de la aplicación servida por Apache.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Instrucciones de Uso</h2>
+            <ol>
+                <li>Clonar este repositorio en tu sistema local.</li>
+                <li>Configurar las variables de entorno en el archivo <code>.env</code>:</li>
+                <pre>
+LDAP_ORGANISATION=Ejemplo organizacion
+LDAP_DOMAIN=ejemplo.com
+LDAP_ADMIN_PASSWORD=Contraseña_Admin
+SUBDOMAIN=tu-subdominio
+TOKEN=tu-token-de-duckdns
+                </pre>
+                <li>Cargar un archivo PHP o index en la carpeta <code>miApp</code>.</li>
+                <li>Levantar los servicios con <code>docker-compose up -d</code>.</li>
+                <li>Acceder a los servicios:
+                    <ul>
+                        <li>phpLDAPadmin: <code>http://phpldapadmin.&lt;tu-subdominio&gt;</code></li>
+                        <li>Aplicación web: <code>http://ldap.&lt;tu-subdominio&gt;</code></li>
+                    </ul>
+                </li>
+                <li>Acceder a la documentación y soporte de cada servicio en sus páginas oficiales.</li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Autores:</strong> Antonio Martín y Yago Catalano. Contacto: <a href="mailto:alumno01_smr1_20@iescastelar.com">Antonio</a> | <a href="mailto:ycatalanoa01@educarex.es">Yago</a></p>
+    </footer>
+</body>
+</html>

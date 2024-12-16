@@ -1,0 +1,65 @@
+services:
+  traefik:
+    image: traefik:latest
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped
+
+  php-apache:
+    image: php:8.2-apache-bullseye
+    container_name: php-apache
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.php-apache.rule=Host(`ldap.${SUBDOMAIN}`)"
+    volumes:
+      - ./miApp:/var/www/html
+      - ./apache-security.conf:/etc/apache2/conf-enabled/security.conf
+    restart: unless-stopped
+    command: >
+      /bin/sh -c "apt-get update && a2enmod headers authnz_ldap && apache2-foreground"
+
+  ldap:
+    image: osixia/openldap:latest
+    container_name: ldap
+    environment:
+      LDAP_ORGANISATION: "${LDAP_ORGANISATION}"
+      LDAP_DOMAIN: "${LDAP_DOMAIN}"
+      LDAP_ADMIN_PASSWORD: "${LDAP_ADMIN_PASSWORD}"
+    volumes:
+      - ./ldap-data:/var/lib/ldap
+      - ./ldap-config:/etc/ldap/slapd.d
+    restart: unless-stopped
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap
+      - PHPLDAPADMIN_HTTPS=false
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.phpldapadmin.rule=Host(`phpldapadmin.${SUBDOMAIN}`)"
+    restart: unless-stopped
+    depends_on:
+      - ldap
+
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdns
+    environment:
+      - TZ=Etc/Utc
+      - SUBDOMAINS=${SUBDOMAIN}
+      - TOKEN=${TOKEN}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.duckdns.rule=Host(`duckdns.${SUBDOMAIN}`)"
+      - "traefik.http.services.duckdns.loadbalancer.server.port=80"
+    volumes:
+      - ./duckdns:/data
+    restart: unless-stopped

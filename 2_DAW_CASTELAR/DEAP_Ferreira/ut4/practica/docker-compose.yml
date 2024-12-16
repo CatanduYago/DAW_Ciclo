@@ -1,0 +1,43 @@
+networks:
+  monitoring:
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefikbare
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdnsbare
+    environment:
+      - TZ=Etc/Utc
+      - SUBDOMAINS=${SUBDOMAIN}
+      - TOKEN=${TOKEN}
+    volumes:
+      - ./duckdns:/data
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  tomcat:
+    image: tomcat:latest
+    container_name: tomcatbare
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tomcat.rule=Host(`ut4.${SUBDOMAIN}`)"
+    volumes:
+      - ./index.html:/usr/local/tomcat/webapps/index.html
+    restart: unless-stopped
+    networks:
+      - monitoring

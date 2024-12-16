@@ -1,0 +1,70 @@
+networks:
+  monitoring:
+
+services:
+  traefik:
+    image: traefik:latest
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  php-apache:
+    image: php:apache
+    container_name: php-apache
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.php-apache.rule=Host(`cosa.${SUBDOMAIN}`)"
+    volumes:
+      - ~/miapp:/var/www/html
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdns
+    environment:
+      - TZ=Etc/Utc
+      - SUBDOMAINS=${SUBDOMAIN}
+      - TOKEN=${TOKEN}
+    volumes:
+      - ./duckdns:/data
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - 3001:3001
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`monitor.${SUBDOMAIN}`)"
+    networks:
+      - monitoring
+  flask:
+    build: .
+    ports:
+          - "5000:5000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`flask.${SUBDOMAIN}`)"
+      - "traefik.http.services.laravel.loadbalancer.server.port=5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
+    command: flask run --host=0.0.0.0
+    networks:
+      - monitoring
+volumes:
+  mariadb_data:

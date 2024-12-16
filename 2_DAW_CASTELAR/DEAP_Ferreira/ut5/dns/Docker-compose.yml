@@ -1,0 +1,17 @@
+services:
+  dns:
+    ports:
+      - 53:53/udp
+      - 5380:8080
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        #max-file: "10"
+    environment:
+      - "HTTP_USER=foo"
+      - "HTTP_PASS=bar"
+    restart: always
+    image: jpillora/dnsmasq

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+GIT_DIR=/home/azureyago/hardfloat-blog.git
+GIT_WORK_TREE=/home/azureyago/hardfloat-blog.git
+
+if [ ! -d $GIT_WORK_TREE ]; then
+        mkdir $GIT_WORK_TREE
+fi
+
+git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE checkout -f master
+cd $GIT_WORK_TREE
+git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE submodule update --init --recursive
+docker compose -f docker-compose.yml down &&
+docker compose -f docker-compose.yml up -d
